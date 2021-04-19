@@ -36,7 +36,7 @@ cmd_pred(desalvo$lat, desalvo$lon) #euclidean mean
 cgt = cgt_profile(desalvo$lat, desalvo$lon,buffer = 10,f=0.2,g=80, n=100)
 ```
 
-#Producs Raster Map of probability of serial killers home
+#Produces Raster Map of probability of serial killers home
 ```{r}
 g_map = sp::SpatialPixelsDataFrame(points = cgt[c("lons", "lats")], data = cgt)
 g_map <- raster::raster(g_map)#Raster Data of map for ArcGIS
